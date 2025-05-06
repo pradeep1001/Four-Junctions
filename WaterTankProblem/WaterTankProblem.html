@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Tank Problem</title>
+    <script defer src="js/Main.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Water Tank Problem</h1>
+    <div class="container">
+        <p>Enter the heights of blocks (comma separated numbers):</p>
+        <div class="input-section">
+            <input type="text" id="blockInput" placeholder="e.g. 0,4,0,0,0,6,0,6,4,0">
+            <button onclick="calculateWater()">Calculate</button>
+        </div>
+        <div class="result" id="result"></div>
+        <div class="visualization" id="visualization"></div>
+        <div class="explanation">
+            <h3>How it works:</h3>
+            <p>The water fills the spaces between blocks based on the heights of surrounding blocks. Water can only be trapped between blocks of equal or greater height.</p>
+            <p>The algorithm calculates the maximum height of water at each position by finding the minimum of the highest block to the left and the highest block to the right, then subtracting the current block's height.</p>
+        </div>
+    </div>
+</body>
+</html>
